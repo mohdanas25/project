@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Arithmetic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <h1> Arithmetic Calculator </h1>
+    
+    <table id = "calculator">
+      <input type="text" id="displayBar">
+      
+      <tr>
+        <td><button onclick="clearDisplay()">AC</button></td>
+        <td><button onclick="clearLast()">C</button></td>
+        <td><button onclick="appendOperator('%')">%</button></td>
+        <td><button onclick="appendOperator('/')">/</button></td>
+      </tr>
+      
+      <tr>
+        <td><button onclick="appendDigit('7')">7</button></td>
+        <td><button onclick="appendDigit('8')">8</button></td>
+        <td><button onclick="appendDigit('9')">9</button></td>
+        <td><button onclick="appendOperator('*')">*</button></td>
+      </tr>
+      
+      <tr>
+        <td><button onclick="appendDigit('4')">4</button></td>
+        <td><button onclick="appendDigit('5')">5</button></td>
+        <td><button onclick="appendDigit('6')">6</button></td>
+        <td><button onclick="appendOperator('-')">-</button></td>
+      </tr>
+      
+      <tr>
+        <td><button onclick="appendDigit('1')">1</button></td>
+        <td><button onclick="appendDigit('2')">2</button></td>
+        <td><button onclick="appendDigit('3')">3</button></td>
+        <td><button onclick="appendOperator('+')">+</button></td>
+      </tr>
+      
+      <tr>
+        <td><button onclick="appendDigit('00')">00</button></td>
+        <td><button onclick="appendDigit()">0</button></td>
+        <td><button onclick="appendOperator('.')">.</button></td>
+        <td><button onclick="calculate()">=</button></td>
+      </tr>
+      
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

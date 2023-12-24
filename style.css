@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    paddin: 0;
+    box-sizing: border-box;
+}
+
+#displayBar {
+    width: 350px;
+    height: 80px;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 8px;
+    text-align: end;
+}
+
+#calculator {
+    width: 350px;
+    height: 300px;
+}
+
+#calculator td button {
+    width: 70px;
+    height: 60px;
+    font-weight: bold;
+    margin: 8.1px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    box-shadow: none;
+}
