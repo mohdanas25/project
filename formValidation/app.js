@@ -14,6 +14,16 @@ function validateform() {
         return false;
     }
 
+    if (!valName(name)) {
+        alert("Enter name correctly");
+        return false;
+    }
+
+    if (!valName(fname)) {
+        alert("Enter Father name correctly");
+        return false;
+    }
+
     if (!valEmail(email)) {
         alert("Please Enter Your Correct Email");
         return false;
@@ -30,6 +40,10 @@ function validateform() {
     }
 }
 
+function valName(name) {
+    let hasChar = /^[a-zA-Z\s']+$/;
+    return hasChar.test(name);
+}
 function valEmail(email) {
     let x = email;
     let atPos = x.indexOf("@");
@@ -45,8 +59,24 @@ function valEmail(email) {
 function valPass(pass) {
     if (pass.length < 6)
         return false;
-    else
-        return true;
+
+    let hasUpperCase = false;
+    let hasLowerCase = false;
+    let hasDigit = false;
+    let hasSymbol = false;
+
+    for (let char of pass) {
+        if (/[a-z]/.test(char))
+            hasLowerCase = true;
+        if (/[A-Z]/.test(char))
+            hasUpperCase = true;
+        if (/[0-9]/.test(char))
+            hasDigit = true;
+        if (/[!@#$%^&*()-_=+]/.test(char))
+            hasSymbol = true;
+    }
+
+    return hasUpperCase && hasLowerCase && hasDigit && hasSymbol;
 }
 
 function valPhone(phone) {
